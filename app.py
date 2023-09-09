@@ -16,11 +16,11 @@ def endpoint():
         'track':track,
         'github_file_url': 'https://github.com/gbemike/endpoint/blob/main/app.py',
         'github_repo_url':'https://github.com/gbemike/endpoint',
-        'status_code':100
+        'status_code':100,
     }
 
     # return response dictionary in json format
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, port=3000)
