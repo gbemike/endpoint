@@ -14,9 +14,13 @@ def endpoint():
         'current_day': datetime.datetime.today().strftime('%A'),
         'utc_time': datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         'track':track,
-        'github_file_url': ,
+        'github_file_url': 'https://github.com/gbemike/endpoint/blob/main/app.py',
         'github_repo_url':'https://github.com/gbemike/endpoint',
         'status_code':100
     }
 
-    return response
+    # return response dictionary in json format
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run()
