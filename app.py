@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/api", methods = ["GET"])
 def endpoint():
     # The endpoint should take two GET request query parameters
-    slack_name = request.args.get('slack_name', 'Gbemike Olowe')
+    slack_name = request.args.get('slack_name', 'Gbemike_Olowe')
     track = request.args.get('track', 'backend')
 
     response = {
@@ -16,11 +16,11 @@ def endpoint():
         'track':track,
         'github_file_url': 'https://github.com/gbemike/endpoint/blob/main/app.py',
         'github_repo_url':'https://github.com/gbemike/endpoint',
-        'status_code':100,
+        'status_code':200,
     }
 
     # return response dictionary in json format
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3000)
+    app.run(debug=True)
