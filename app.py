@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import datetime
 
 app = Flask(__name__)
@@ -22,9 +22,8 @@ def endpoint():
         'github_repo_url':'https://github.com/gbemike/endpoint',
         'status_code':200,
     }
-
     # return response dictionary in json format
-    return response
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)
