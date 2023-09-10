@@ -3,6 +3,10 @@ import datetime
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Hello this is my home"
+
 @app.route("/api", methods = ["GET"])
 def endpoint():
     # The endpoint should take two GET request query parameters
